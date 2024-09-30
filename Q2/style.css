@@ -1,0 +1,56 @@
+h1{
+text-align: center;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+input, select, textarea {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}

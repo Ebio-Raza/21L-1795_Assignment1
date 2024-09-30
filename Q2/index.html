@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Job Application Form</h1>
+    <form id="jobApplicationForm">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" placeholder="Enter Your First Name" required>
+        
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" placeholder="Enter Your Last Name" required>
+
+        <label for="phone_no">Phone Number</label>
+        <input type="tel" id="phone_no" placeholder="Enter Your Phone Number" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Your Email Address" required>
+
+        <label for="address">Street Address</label>
+        <input type="text" id="address" placeholder="Enter Your Address" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Enter Your City" required>
+
+        <label for="state">State</label>
+        <input type="text" id="state" placeholder="Enter Your State" required>
+
+        <label for="zipcode">ZIP Code</label>
+        <input type="number" id="zipcode" placeholder="Enter ZIP Code" required>
+      </fieldset>
+
+      <!-- Resume and Cover Letter -->
+      <fieldset>
+        <legend>Resume and Cover Letter</legend>
+        <label for="resume">Upload Resume</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+        <label for="cover_letter">Cover Letter</label>
+        <textarea id="cover_letter" placeholder="Write your cover letter" rows="5" required></textarea>
+      </fieldset>
+
+      <!-- Education -->
+      <fieldset>
+        <legend>Education</legend>
+        <label for="education">Highest Level of Education</label>
+        <select id="education" required>
+          <option value="none">No Formal Education</option>
+          <option value="secondary">Secondary Education</option>
+          <option value="bachelor">Bachelor's Degree</option>
+          <option value="master">Master's Degree</option>
+        </select>
+
+        <label for="school">School/University</label>
+        <input type="text" id="school" placeholder="Enter Your School/University" required>
+
+        <label for="major">Major/Area of Study</label>
+        <input type="text" id="major" placeholder="Enter Major/Area of Study" required>
+
+        <label for="grad_year">Graduation Year</label>
+        <input type="number" id="grad_year" min="1950" max="2030" required>
+      </fieldset>
+
+      <!-- Employment History -->
+      <fieldset>
+        <legend>Employment History</legend>
+        <label for="prev_job">Previous Job Title</label>
+        <input type="text" id="prev_job" placeholder="Enter Your Job Title" required>
+
+        <label for="company">Company Name</label>
+        <input type="text" id="company" placeholder="Enter Company Name" required>
+
+        <label for="emp_dates">Employment Dates</label>
+        <input type="text" id="emp_dates" placeholder="e.g., Jan 2020 - Dec 2022" required>
+
+        <label for="job_resp">Job Responsibilities</label>
+        <textarea id="job_resp" placeholder="Describe your responsibilities" rows="4" required></textarea>
+      </fieldset>
+
+      <!-- Skills -->
+      <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Relevant Skills</label>
+        <input type="text" id="skills" placeholder="e.g., Programming, Design" required>
+
+        <label for="certifications">Certifications</label>
+        <input type="text" id="certifications" placeholder="Enter Certifications (if any)">
+      </fieldset>
+
+      <!-- Availability -->
+      <fieldset>
+        <legend>Availability</legend>
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" required>
+
+        <label for="relocate">Willing to Relocate?</label>
+        <select id="relocate" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="schedule">Preferred Work Schedule</label>
+        <input type="time" id="schedule">
+      </fieldset>
+
+      <!-- References -->
+      <fieldset>
+        <legend>References</legend>
+        <label for="ref_name">Reference Name</label>
+        <input type="text" id="ref_name" placeholder="Enter Reference Name" required>
+
+        <label for="ref_contact">Reference Contact Info</label>
+        <input type="text" id="ref_contact" placeholder="Enter Contact Information" required>
+
+        <label for="ref_relation">Relationship to Reference</label>
+        <input type="text" id="ref_relation" placeholder="Enter Relationship" required>
+      </fieldset>
+
+      <!-- Additional Questions -->
+      <fieldset>
+        <legend>Why do you want to work for this company?</legend>
+        <textarea id="why_work" placeholder="Write your reasons" rows="4" required></textarea>
+      </fieldset>
+
+      <!-- Consent -->
+      <fieldset>
+        <legend>Consent and Agreement</legend>
+        <label>
+          <input type="checkbox" id="terms" required>
+          I agree to the terms and conditions
+        </label>
+
+        <label>
+          <input type="checkbox" id="privacy" required>
+          I acknowledge the privacy policy
+        </label>
+      </fieldset>
+
+      <!-- Buttons -->
+      <button type="submit">Submit</button>
+      <button type="button" id="viewTable">View Applications as Table</button>
+    </form>
+
+    <!-- Table for displaying submitted data -->
+    <div id="applicationsTable" style="display:none;">
+      <h2>Submitted Applications</h2>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Resume</th>
+            <th>Cover Letter</th>
+            <th>Education</th>
+            <th>School</th>
+            <th>Previous Job</th>
+            <th>Company</th>
+            <th>Skills</th>
+            <th>Start Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
